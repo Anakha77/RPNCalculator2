@@ -17,7 +17,7 @@ namespace RPNCalculator2.Specs
         [When(@"I Compute the command")]
         public void WhenIComputeTheCommand()
         {
-            _context.Result = Calculator.Compute(_context.Command);
+            _context.Result = Calculator.ParseCommand(_context.Command);
         }
 
         [Then(@"the result should be (.*)")]

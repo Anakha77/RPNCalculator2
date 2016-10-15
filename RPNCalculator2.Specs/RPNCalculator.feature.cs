@@ -72,10 +72,10 @@ namespace RPNCalculator2.Specs
         [NUnit.Framework.TestCaseAttribute("1 2 -", "-1", new string[0])]
         [NUnit.Framework.TestCaseAttribute("2 3 *", "6", new string[0])]
         [NUnit.Framework.TestCaseAttribute("9 3 /", "3", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("5 3 4 − *", "-1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("5 3 4 - *", "-5", new string[0])]
         [NUnit.Framework.TestCaseAttribute("3 4 5 * -", "-17", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("3 4 − 5 *", "-1", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("5 1 2 + 4 × + 3 −", "14", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("3 4 - 5 *", "-5", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("5 1 2 + 4 * + 3 -", "14", new string[0])]
         public virtual void ComputeOperation(string command, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
