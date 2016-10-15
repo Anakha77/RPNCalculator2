@@ -115,20 +115,20 @@
   <ItemGroup>
     <Compile Include="CalculatorContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RPNCalculator2.feature.cs">
+    <Compile Include="RPNCalculator.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RPNCalculator2.feature</DependentUpon>
+      <DependentUpon>RPNCalculator.feature</DependentUpon>
     </Compile>
-    <Compile Include="RPNCalculator2Steps2.cs" />
+    <Compile Include="RPNCalculatorTest.cs" />
     <Compile Include="SpecFlowNUnitExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="RPNCalculator2.feature">
+    <None Include="RPNCalculator.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RPNCalculator2.feature.cs</LastGenOutput>
+      <LastGenOutput>RPNCalculator.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

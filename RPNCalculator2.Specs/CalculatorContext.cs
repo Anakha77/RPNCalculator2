@@ -3,7 +3,7 @@
     public class CalculatorContext
     {
         // Input
-        public string CommandText { get; set; }
+        public string Command { get; set; }
 
         // Output
         public int Result { get; set; }

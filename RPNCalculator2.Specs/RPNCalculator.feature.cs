@@ -18,20 +18,20 @@ namespace RPNCalculator2.Specs
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("RPNCalculator2")]
-    public partial class RPNCalculator2Feature
+    [NUnit.Framework.DescriptionAttribute("RPNCalculator")]
+    public partial class RPNCalculatorFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "RPNCalculator2.feature"
+#line 1 "RPNCalculator.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RPNCalculator2", "\tIn order to have good math notes\r\n\tAs a polish\r\n\tI want to make computations", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RPNCalculator", "\tIn order to have good math notes\r\n\tAs a polish\r\n\tI want to make computations", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,14 +64,19 @@ namespace RPNCalculator2.Specs
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Compute operation")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("\"2\"", "2", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("\"4\"", "4", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("\"2 2 +\"", "4", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("\"4 2 +\"", "6", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("\"5 0 +\"", "5", new string[0])]
-        public virtual void AddTwoNumbers(string command, string result, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("2", "2", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("2 2 +", "4", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("1 6 +", "7", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("1 2 -", "-1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("2 3 *", "6", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("9 3 /", "3", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("5 3 4 − *", "-1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("3 4 5 * -", "-17", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("3 4 − 5 *", "-1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("5 1 2 + 4 × + 3 −", "14", new string[0])]
+        public virtual void ComputeOperation(string command, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -79,13 +84,13 @@ namespace RPNCalculator2.Specs
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Compute operation", @__tags);
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I have entered <comand> into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", command), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("I press enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I Compute the command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
