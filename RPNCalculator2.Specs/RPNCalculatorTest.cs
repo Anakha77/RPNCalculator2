@@ -6,7 +6,7 @@ namespace RPNCalculator2.Specs
     [Binding]
     public class RPNCalculatorTest
     {
-        private readonly CalculatorContext _context = new CalculatorContext();
+        public CalculatorContext _context = new CalculatorContext();
 
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(string p0)
